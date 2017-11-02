@@ -80,6 +80,75 @@ body = str_sub(string = emails, start = breaks[,2]+1)
 cat(body)
 
 
+### Handout 2
+#1.
+fruit = c("apple", "banana", "pear", "pinapple")
+
+#2.
+str_detect(fruit, "a")
+str_detect(fruit, "^a") # detect whether the first letter is a. ^ means start with
+str_detect(fruit, pattern = "a$") # detect whether the last letter is a. $ means end with
+str_detect(fruit, "[aeiou]") # detecting any of them
+str_detect(fruit, "[a-d]")
+
+#3.
+# detect a string that starts with "a" and ends with "e"
+str_detect(fruit, pattern = "^a[a-z]*e$")
+
+#4.
+
+phone = "213 740 4826"
+phone = c("213 740 4826", "213-740-4826")
+
+parser = "[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}"
+
+str_detect(phone, parser)
+
+#5.
+cat(body[10])
+cat(body[18])
+
+str_extract(string = body, pattern = parser)
+
+#6.
+zip = c("90028", "90028-0809")
+zip_parser = "[0-9]{5}(-[0-9]{4})?"
+str_detect(zip, zip_parser)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
